@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barra de navegacion</title>
     <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/b2a2ad67c3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="container">
     <header class="header">
       <h1 class="logo">
-        <img src="vector-diseno-degradado-colorido-pajaro.png" alt="" />
+        <figure>
+                  <img src="vector-diseno-degradado-colorido-pajaro.png" alt="" />
+        </figure>
         <p>Rivere</p>
       </h1>
-      <button class="entrada">Entrada</button>
-      <nav class="barra-nav barra-nav-active">
+      <button class="entrada" id="entrada">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="barra-nav active" id="navegacion">
         <a href="#">Instagram</a>
         <a href="#">Facebook</a>
         <a href="#">Tik Tok</a>
         <a href="#">YouTube</a>
-        <button class="salida">Salir</button>
+        <button class="salida" id="salida">Salir</button>
       </nav>
     </header>
     <main class="main">Main</main>
+    <script src="index.js"></script>
   </body>
 </html>

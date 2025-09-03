@@ -64,11 +64,9 @@ button {
   height: 500px;
   display: grid;
   grid-template: repeat(5, 1fr) / 1fr;
-  visibility: hidden;
-  display: none;
 }
 
-.barra-nav-active > * {
+.barra-nav > * {
   background-color: #616161;
   display: flex;
   justify-content: center;
@@ -80,7 +78,7 @@ button {
   font-weight: 600;
   color: #c0c0c0;
 }
-.barra-nav-active > *:active {
+.barra-nav > *:active {
   background-color: rgb(53, 59, 53);
   color: rgb(17, 17, 17);
 }
@@ -88,14 +86,12 @@ button {
 .header {
   background-color: #222;
   display: grid;
-  grid-template: "logo nav-bar entrada"/ 250px auto 100px;
+  grid-template: "logo nav-bar entrada"/ 225px auto 100px;
 }
 .logo {
   grid-area: logo;
-  background-color: aquamarine;
 }
 .entrada {
-  background-color: red;
   grid-area: entrada;
 }
 .barra-nav {
@@ -107,15 +103,50 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 }
 .logo p {
   color: #000000;
-
+  cursor: pointer;
+}
+.logo figure {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logo img {
   width: 80px;
   height: auto;
+
   border-radius: 50%;
-  background-image:  linear-gradient(rgba(0, 17, 255, 0.5), rgba(255, 0, 119, 0.5));
+  background-image: linear-gradient(
+    rgba(0, 17, 255, 0.5),
+    rgba(255, 0, 119, 0.5)
+  );
+  cursor: pointer;
+}
+.logo p:hover {
+  color: #8a8a8a;
+}
+
+/* Elementos del boton de entrada */
+.entrada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.entrada i {
+  font-size: 40px;
+}
+.entrada:hover {
+  background-color: #353535;
+  color: #8a8a8a;
+  /* #a1a1a1 */
+}
+/* active */
+.active {
+  visibility: hidden;
+  display: none;
 }
