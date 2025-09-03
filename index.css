@@ -64,6 +64,7 @@ button {
   height: 500px;
   display: grid;
   grid-template: repeat(5, 1fr) / 1fr;
+  visibility: hidden;
   display: none;
 }
 
@@ -87,13 +88,11 @@ button {
 .header {
   background-color: #222;
   display: grid;
-  grid-template: "logo nav-bar entrada"/ 100px auto 100px;
-}
-.header > * {
+  grid-template: "logo nav-bar entrada"/ 250px auto 100px;
 }
 .logo {
-  background-color: red;
   grid-area: logo;
+  background-color: aquamarine;
 }
 .entrada {
   background-color: red;
@@ -101,4 +100,22 @@ button {
 }
 .barra-nav {
   grid-area: nav-bar;
+}
+
+/* Elementos del Logo */
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo p {
+  color: #000000;
+
+}
+.logo img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  background-image:  linear-gradient(rgba(0, 17, 255, 0.5), rgba(255, 0, 119, 0.5));
 }
