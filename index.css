@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  all: unset;
+}
+
+body {
+  background-color: #222;
+  width: 100vw;
+  min-height: 100vh;
+}
+.container {
+  display: grid;
+  grid-template:
+    "header" 100px
+    "main" auto;
+}
+.header {
+  grid-area: header;
+  background-color: #32a70f;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template:
+  "titulo navegacion" / 100px auto
+  ;
+}
+.main {
+  grid-area: main;
+  background-color: #a70f0f;
+}
+h1 {
+  grid-area: titulo;
+  background-color: aqua;
+}
+nav {
+  grid-area: navegacion;
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+}
