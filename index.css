@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+
 *,
 *::after,
 *::before {
@@ -5,7 +7,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-button {
+button,
+a {
   all: unset;
 }
 
@@ -13,6 +16,7 @@ body {
   background-color: #222;
   width: 100vw;
   min-height: 100vh;
+  font-family: "Sen", sans-serif;
 }
 .container {
   display: grid;
@@ -22,19 +26,21 @@ body {
 }
 .header {
   grid-area: header;
-  background-color: #32a70f;
-  height: 100%;
+  background-color: #000000;
+  /* height: 100%;
   width: 100%;
   display: grid;
   grid-template:
-  "titulo navegacion" / 100px auto
-  ;
+    "titulo boton"
+    "navegacion navegacion"
+    / 100px 100px; */
 }
 .main {
   grid-area: main;
-  background-color: #a70f0f;
+  background-color: #b8b8b8;
 }
-h1 {
+
+/* h1 {
   grid-area: titulo;
   background-color: aqua;
 }
@@ -45,4 +51,54 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: auto;
+}
+button {
+  grid-area: boton;
+} */
+
+/* Barra de navegacion */
+.barra-nav {
+  background-color: #222;
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  display: grid;
+  grid-template: repeat(5, 1fr) / 1fr;
+  display: none;
+}
+
+.barra-nav-active > * {
+  background-color: #616161;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #c0c0c0;
+}
+.barra-nav-active > *:active {
+  background-color: rgb(53, 59, 53);
+  color: rgb(17, 17, 17);
+}
+
+.header {
+  background-color: #222;
+  display: grid;
+  grid-template: "logo nav-bar entrada"/ 100px auto 100px;
+}
+.header > * {
+}
+.logo {
+  background-color: red;
+  grid-area: logo;
+}
+.entrada {
+  background-color: red;
+  grid-area: entrada;
+}
+.barra-nav {
+  grid-area: nav-bar;
 }
